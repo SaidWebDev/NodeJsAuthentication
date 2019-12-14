@@ -13,10 +13,10 @@ app.get('/users', (req, res) => {
 
 app.post('/users', async (req,res)=> {
 try{
-    const salt= await bcrypt.genSalt()
-    const hashedpassword = await bcrypt.hash(req.body.password,salt)
-    console.log(salt)
-    console.log(hashedpassword)
+   // const salt= await bcrypt.genSalt()
+    const hashedpassword = await bcrypt.hash(req.body.password,10)
+   // console.log(salt)
+     console.log("The encrypted password is " + hashedpassword)
     const user ={name: req.body.name,
         password: req.body.password}
         users.push(user)
