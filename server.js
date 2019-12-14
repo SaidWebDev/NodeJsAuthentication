@@ -18,7 +18,7 @@ try{
    // console.log(salt)
      console.log("The encrypted password is " + hashedpassword)
     const user ={name: req.body.name,
-        password: req.body.password}
+        password: hashedpassword}
         users.push(user)
         res.status(201).send()
 }  
