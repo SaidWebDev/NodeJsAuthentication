@@ -26,6 +26,5 @@ catch{
     res.status(500).send()
 }
 })
-
 app.listen(4000)
  
